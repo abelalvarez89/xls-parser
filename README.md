@@ -1,29 +1,40 @@
-# README #
+# xls-parser #
 
-This library is to parse xls into json object
+### Install ###
+````
+npm install xls-parser
+````
 
-### What is this repository for? ###
+### Use node ###
 
-* Quick summary
-* Version
+````
+'use strict';
+var xlsParser = require('xls-parser');
 
-### How do I get set up? ###
+function uploadFile(file) {
+	
+	var data = xlsParser.onFileSelection(file);
+	console.log(data); //output xls json data
+}
 
-* var xslParser =  require('xls-parser');
-* xlsParser.onFileSelection(file);
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+````
 
-### Contribution guidelines ###
+#### Example ####
 
-* Writing tests
-* Code review
-* Other guidelines
+Im using ng-file-upload in this example
+ # html #
+ ''''
+ <input type="file" ngf-select="vm.uploadFile($file)" ng-disabled="vm.disableUpload" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"  />
+ <pre>{{vm.data | json}}</pre>
+ ''''
 
-### Who do I talk to? ###
+# javascript #
+ ''''
+var xlsParser = require('xls-parser');
 
-* Repo owner or admin
-* Other community or team contact
+function uploadFile(file) {
+	
+	var data = xlsParser.onFileSelection(file);
+	
+}
+ ''''
