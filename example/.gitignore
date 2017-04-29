@@ -1,0 +1,8 @@
+reports
+node_modules
+src/bundle.min.js
+/.sonar
+npm-*
+*/bundle.min.*
+*/plugins
+*/platforms

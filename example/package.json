@@ -1,0 +1,40 @@
+{
+  "name": "xls-parser-test",
+  "version": "0.0.1",
+  "description": "test xls-parser",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "browserify -g uglifyify -e src/index.js -d | exorcist bundle.min.js.map > bundle.min.js",
+    "watch": "watchify src/index.js -d -o src/bundle.min.js -v",
+    "serve": "live-server --port=3001 src",
+    "start": "parallelshell \"npm run watch -s\" \"npm run serve -s\""
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "browserify-css": "^0.6.1",
+    "browserify-istanbul": "^0.2.1",
+    "browserify-ngannotate": "^1.0.1",
+    "exorcist": "^0.4.0",
+    "live-server": "^0.8.1",
+    "parallelshell": "^1.2.0",
+    "stringify": "^3.1.0",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.3.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-ngannotate",
+      "browserify-css"
+    ]
+  },
+  "files": [
+    "src",
+    "bundle.min.*"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "ng-file-upload": "^12.2.13",
+    "xls-parser": "^1.0.9"
+  }
+}
