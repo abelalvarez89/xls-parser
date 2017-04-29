@@ -1,6 +1,6 @@
 {
   "name": "xls-parser",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "Parse xls into json",
   "main": "index.js",
   "scripts": {
