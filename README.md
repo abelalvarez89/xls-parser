@@ -34,7 +34,7 @@ var xlsParser = require('xls-parser');
 
 function uploadFile(file) {
 	
-	var data = xlsParser.onFileSelection(file);
+	vm.data = xlsParser.onFileSelection(file);
 	
 }
 ````
