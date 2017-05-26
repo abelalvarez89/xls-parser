@@ -1,5 +1,8 @@
 # xls-parser #
 
+###Description###
+Parses xls, xslx and csv into json
+
 ### Install ###
 ````
 npm install xls-parser

@@ -1,5 +1,5 @@
 'use strict';
-var sheetJs = require('xlsjs');
+var sheetJs = require('xlsx');
 var parsedXls = [];
 
 exports.onFileSelection = function(file) {
@@ -19,32 +19,8 @@ exports.onFileSelection = function(file) {
 		return onLoadEvent(binary, reader);
 	});
 
-	return getResult();
-};
-
-function getResult() {
 	return parsedXls;
 };
-
-function onFileSelection(file) {
-
-	var reader = new FileReader();
-
-	reader.readAsArrayBuffer(file);
-	reader.addEventListener('loadend', function() {
-		var binary = '';
-		var bytes = new Uint8Array(reader.result);
-
-		for (var i = 0; i < bytes.byteLength; i++) {
-			binary += String.fromCharCode(bytes[i]);
-		}
-
-		var output = onLoadEvent(binary, reader);
-
-		return output;
-	});
-
-}
 
 function onLoadEvent(binary, reader) {
 	var workbook = sheetJs.read(binary, {
