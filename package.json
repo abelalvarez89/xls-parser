@@ -1,6 +1,6 @@
 {
   "name": "xls-parser",
-  "version": "1.1.0",
+  "version": "2.0.1",
   "description": "Parse xls into json",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,9 @@
     "spreadsheet"
   ],
   "author": "Abel Alvarez <abelalvarez89@hotmail.com>",
+  "contributors": [
+    "Drew Nolan"
+  ],
   "license": "ISC",
   "dependencies": {
     "xlsx": "^0.10.3"
