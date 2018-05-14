@@ -12,7 +12,10 @@ angular.module('test-xls-parser', ['ngFileUpload'])
         var xlsParser = require('xls-parser');
 
         vm.uploadFile = function(file){
-            vm.data = xlsParser.onFileSelection(file);
+            xlsParser.onFileSelection(file)
+			.then((data) => {
+				vm.data = data;
+			});
         }
     },
     controllerAs: 'vm'
