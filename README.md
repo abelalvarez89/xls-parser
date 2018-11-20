@@ -5,13 +5,13 @@ Parse csv, xls, xlsx into json
 
 ### Install ###
 ````
-npm install xlsx-parse-json
+npm install xls-parser
 ````
 
 ### Use node ###
 Example
 ````
-import xlsxParser from 'xlsx-parse-json';
+import xlsxParser from 'xls-parser';
 
 xlsxParser
   .onFileSelection(file)
