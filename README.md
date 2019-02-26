@@ -88,6 +88,17 @@ index.html
 ````
 
 # input file #
+### Test (sheet name)
+````
+Price |  Name
+-----------------
+4     |   a
+8     |   b
+9     |   c
+4     |
+````
+
+### Sheet1 (sheet name)
 ````
 Name	| Lastname	| Age
 -------------------------
@@ -100,25 +111,42 @@ test4	| node		|
 
 # output sample #
 ````
-[
-  {
-    "Name": "test1",
-    "Lastname": "node",
-    "Age": 4
-  },
-  {
-    "Name": "test2",
-    "Lastname": "node"
-  },
-  {
-    "Name": "test3",
-    "Lastname": "node",
-    "Age": 9
-  },
-  {
-    "Name": "test4",
-    "Lastname": "node"
-  }
-]
+{
+  "Test": [
+    {
+      "Price": 4,
+      "Name": "a"
+    },
+    {
+      "Price": 8,
+      "Name": "b"
+    },
+    {
+      "Price": 9,
+      "Name": "c"
+    },
+    {
+      "Price": 4
+    }
+  ],
+  "Sheet1": [
+    {
+      "Name": "Nico",
+      "Lastname": "Jhones",
+      "Age": 69
+    },
+    {
+      "Name": "Carlos",
+      "Age": 4
+    },
+    {
+      "Name": "Abel",
+      "Age": 55
+    },
+    {
+      "Name": "Gabriel"
+    }
+  ]
+}
 ````
 

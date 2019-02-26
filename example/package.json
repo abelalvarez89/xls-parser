@@ -7,12 +7,12 @@
     "build": "browserify -g uglifyify -e src/index.js -d | exorcist bundle.min.js.map > bundle.min.js",
     "watch": "watchify src/index.js -d -o src/bundle.min.js -v",
     "serve": "live-server --port=3001 src",
-    "start": "parallelshell \"npm run watch -s\" \"npm run serve -s\""
+    "start": "npm-run-all --parallel watch serve"
   },
   "license": "ISC",
   "devDependencies": {
     "browserify": "^10.2.4",
-    "browserify-css": "^0.6.1",
+    "browserify-css": "^0.14.0",
     "browserify-istanbul": "^0.2.1",
     "browserify-ngannotate": "^1.0.1",
     "exorcist": "^0.4.0",
@@ -20,7 +20,7 @@
     "parallelshell": "^1.2.0",
     "stringify": "^3.1.0",
     "uglifyify": "^3.0.1",
-    "watchify": "^3.3.1"
+    "watchify": "^3.11.1"
   },
   "browserify": {
     "transform": [
@@ -35,6 +35,8 @@
   "dependencies": {
     "angular": "^1.6.4",
     "ng-file-upload": "^12.2.13",
-    "xls-parser": "^2.0.2"
+    "npm-run-all": "^4.1.5",
+    "xls-parser": "^2.0.2",
+    "xlsx-parse-json": "^2.0.2"
   }
 }
