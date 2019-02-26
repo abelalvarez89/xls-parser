@@ -102,10 +102,10 @@ Price |  Name
 ````
 Name	| Lastname	| Age
 -------------------------
-test1	| node		| 4
-test2	| node		|
-test3	| node		| 9
-test4	| node		|
+Nico	| Jhones		| 69
+Carl	|       		| 4
+Abel	|       		| 30
+Gabe	|       		|
 
 ````
 
@@ -136,7 +136,7 @@ test4	| node		|
       "Age": 69
     },
     {
-      "Name": "Carlos",
+      "Name": "Carl",
       "Age": 4
     },
     {
@@ -144,7 +144,7 @@ test4	| node		|
       "Age": 55
     },
     {
-      "Name": "Gabriel"
+      "Name": "Gabe"
     }
   ]
 }
