@@ -16,7 +16,7 @@ Example
 import xlsxParser from 'xls-parser';
 
 xlsxParser
-  .onFileSelection(file
+  .onFileSelection(file)
   .then(data => {
     var parsedData = data;
   });
