@@ -49,7 +49,7 @@ const getData = (lastColRow, columns, headers, sheet) => {
 			const cellValue = getValue(sheet, columns[index], R);
 
 			if (cellValue) {
-				element[header] = cellValue.w
+				element[header] = cellValue.w ? cellValue.w : cellValue.v
 			}
 		});
 		if (Object.keys(element).length > 0) {
