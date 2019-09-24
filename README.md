@@ -1,7 +1,7 @@
 # xls-parser #
 
 ### Description ###
-Parse csv, xls, xlsx into json
+Parse csv, xls, xlsx into json. Having multiple sheets is not an issue we return and object for each sheet found. See example below for more info. Visit https://abelalvarez.info/xls-parser/ to test it online.
 
 ### Install ###
 ````
