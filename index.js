@@ -29,30 +29,30 @@ const onLoadEvent = (binary, reader, hideEmptyRows, showNullProperties) => {
 	sheetNames.forEach(name => {
 		const sheet = workbook.Sheets[name];
 		const desiredCells = getDesiredCells(sheet);
-		const lastColRow = getLastRowCol(desiredCells);
-		const columnsAndHeaders = getColumnsAndHeaders(sheet, desiredCells);
-
-		const data = getData(lastColRow, columnsAndHeaders.excelColumns, columnsAndHeaders.headers, sheet, showNullProperties);
-		if (hideEmptyRows) {
-			const finalData = [];
-			data.forEach(element => {
-				let isEmpty = true;
-				columnsAndHeaders.headers.forEach(header => {
-					if (element[header]) {
-						isEmpty = false;
+		if (desiredCells) {
+			const lastColRow = getLastRowCol(desiredCells);
+			const columnsAndHeaders = getColumnsAndHeaders(sheet, desiredCells);
+			const data = getData(lastColRow, columnsAndHeaders.excelColumns, columnsAndHeaders.headers, sheet, showNullProperties);
+			if (hideEmptyRows) {
+				const finalData = [];
+				data.forEach(element => {
+					let isEmpty = true;
+					columnsAndHeaders.headers.forEach(header => {
+						if (element[header]) {
+							isEmpty = false;
+						}
+					});
+					if (!isEmpty) {
+						finalData.push(element);
 					}
 				});
-				if (!isEmpty) {
-					finalData.push(element);
-				}
-			});
 
-			parsedXls[name] = finalData;
+				parsedXls[name] = finalData;
+			}
+			else {
+				parsedXls[name] = data;
+			}
 		}
-		else {
-			parsedXls[name] = data;
-		}
-
 	});
 
 	return parsedXls;
