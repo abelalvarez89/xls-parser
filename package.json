@@ -21,6 +21,6 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "xlsx": "^0.14.1"
+    "xlsx": "^0.18.5"
   }
 }
